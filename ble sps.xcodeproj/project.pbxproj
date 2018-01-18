@@ -14,6 +14,7 @@
 		46E1682C1AD4CE9F00B9DCA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E1682B1AD4CE9F00B9DCA1 /* Images.xcassets */; };
 		46E1682F1AD4CE9F00B9DCA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E1682D1AD4CE9F00B9DCA1 /* LaunchScreen.xib */; };
 		46E1683B1AD4CE9F00B9DCA1 /* ble_spsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E1683A1AD4CE9F00B9DCA1 /* ble_spsTests.m */; };
+		46ECA5D91AD65FF100AE6BE4 /* BluetoothUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46ECA5D81AD65FF100AE6BE4 /* BluetoothUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		46E168341AD4CE9F00B9DCA1 /* ble spsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ble spsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E168391AD4CE9F00B9DCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E1683A1AD4CE9F00B9DCA1 /* ble_spsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ble_spsTests.m; sourceTree = "<group>"; };
+		46ECA5D71AD65FF100AE6BE4 /* BluetoothUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothUtils.h; path = BluetoothUtils/BluetoothUtils.h; sourceTree = SOURCE_ROOT; };
+		46ECA5D81AD65FF100AE6BE4 /* BluetoothUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothUtils.m; path = BluetoothUtils/BluetoothUtils.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		46E1681D1AD4CE9F00B9DCA1 /* ble sps */ = {
 			isa = PBXGroup;
 			children = (
+				46ECA5D61AD65FD100AE6BE4 /* BluetoothUtils */,
 				46E168221AD4CE9F00B9DCA1 /* AppDelegate.h */,
 				46E168231AD4CE9F00B9DCA1 /* AppDelegate.m */,
 				46E168251AD4CE9F00B9DCA1 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				46E168391AD4CE9F00B9DCA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46ECA5D61AD65FD100AE6BE4 /* BluetoothUtils */ = {
+			isa = PBXGroup;
+			children = (
+				46ECA5D71AD65FF100AE6BE4 /* BluetoothUtils.h */,
+				46ECA5D81AD65FF100AE6BE4 /* BluetoothUtils.m */,
+			);
+			name = BluetoothUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +176,12 @@
 		46E168131AD4CE9F00B9DCA1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = shenhark;
 				TargetAttributes = {
 					46E1681A1AD4CE9F00B9DCA1 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 339UKLN78L;
 					};
 					46E168331AD4CE9F00B9DCA1 = {
 						CreatedOnToolsVersion = 6.2;
@@ -221,6 +235,7 @@
 			files = (
 				46E168271AD4CE9F00B9DCA1 /* ViewController.m in Sources */,
 				46E168241AD4CE9F00B9DCA1 /* AppDelegate.m in Sources */,
+				46ECA5D91AD65FF100AE6BE4 /* BluetoothUtils.m in Sources */,
 				46E168211AD4CE9F00B9DCA1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,20 +286,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -313,13 +338,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -327,6 +360,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -345,8 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 339UKLN78L;
 				INFOPLIST_FILE = "ble sps/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "smartwebee.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -355,8 +393,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 339UKLN78L;
 				INFOPLIST_FILE = "ble sps/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "smartwebee.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -375,6 +417,7 @@
 				);
 				INFOPLIST_FILE = "ble spsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "smartwebee.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ble sps.app/ble sps";
 			};
@@ -390,6 +433,7 @@
 				);
 				INFOPLIST_FILE = "ble spsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "smartwebee.com.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ble sps.app/ble sps";
 			};
@@ -414,6 +458,7 @@
 				46E168401AD4CE9F00B9DCA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46E168411AD4CE9F00B9DCA1 /* Build configuration list for PBXNativeTarget "ble spsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +467,7 @@
 				46E168431AD4CE9F00B9DCA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
